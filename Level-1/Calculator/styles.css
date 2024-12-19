@@ -1,0 +1,103 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background-attachment: fixed;
+    color: #333;
+}
+
+.calculator {
+    width: 350px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.calculator:hover {
+    transform: scale(1.05);
+}
+
+.display {
+    background: #1e1e2f;
+    color: #00ffcc;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 20px;
+    min-height: 80px;
+    overflow: hidden;
+    border-bottom: 4px solid #00ffcc;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.btn {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #e3e3e3, #c4c4c4);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.6);
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.1s ease, background 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(145deg, #f0f0f0, #d9d9d9);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    background: #d1d1d1;
+}
+
+.equal {
+    background: linear-gradient(145deg, #4caf50, #3b9243);
+    color: white;
+}
+
+.equal:hover {
+    background: linear-gradient(145deg, #5ad963, #42a654);
+}
+
+.equal:active {
+    background: #3b9243;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+.btn.operator {
+    background: linear-gradient(145deg, #ff5722, #e64a19);
+    color: white;
+}
+
+.btn.operator:hover {
+    background: linear-gradient(145deg, #ff7043, #e66022);
+}
+
+.btn.operator:active {
+    background: #e64a19;
+}
+
+.calculator,
+.btn {
+    transition: all 0.3s ease-in-out;
+}
